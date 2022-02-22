@@ -1,3 +1,0 @@
-1. Melakukan instalasi Git sebelumnya mendownload aplikasi git terlebih dahulu di website git-scm.com, jika sudah terdownload maka jalankan file exe yang sudah didownload dan lakukan instalasi, jika instalasi sudah berhasil maka dianjurkan untuk cek version git dengan cara git --version maka akan muncul versi git.
-2. Membuat repository dan melakukan setting seperti config username dan email, melakukan clone project, push project.
-3. Membuat Branch dengan mengetikan "git branch <nama branch>", mengakses branch dengan cara "git checkout <nama branch>", melakukan merge antar branch dengan cara "git merge <nama branch yang akan digabung>". 
