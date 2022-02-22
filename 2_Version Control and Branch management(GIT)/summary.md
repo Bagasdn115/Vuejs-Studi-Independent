@@ -1,5 +1,5 @@
-<h1>Section 2_Version Control and Branch Management</h1>
-<h2>Resume</h2>
+# Section 2_Version Control and Branch Management
+## Resume
 
 Dalam materi ini mempelajai :
 	<br>1. Instalasi GIT</br>
@@ -23,3 +23,6 @@ Dalam materi ini mempelajai :
 <h2>Merge Branch</h2>
     Merge Branch digunakan jika program telah diupdate atau fix bug oleh programmer tertentu dan program akan digabungkan dengan main branch.
 
+# Task
+1. Membuat Repository 
+   ![Gambar teks editor VS Code](https://www.petanikode.com/img/markdown/markdown-vscode.png)
