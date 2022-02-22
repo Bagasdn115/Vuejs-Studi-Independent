@@ -25,4 +25,4 @@ Dalam materi ini mempelajai :
 
 # Task
 1. Membuat Repository 
-   ![Gambar teks editor VS Code](https://www.petanikode.com/img/markdown/markdown-vscode.png)
+   !
