@@ -24,5 +24,9 @@ Dalam materi ini mempelajai :
     Merge Branch digunakan jika program telah diupdate atau fix bug oleh programmer tertentu dan program akan digabungkan dengan main branch.
 
 # Task
-1. Membuat Repository 
-   ! Screenshots/Repository.png
+### 1. Membuat Repository
+Pada task ini membuat repository di github, karena saya sudah memiliki akun maka langsung membuat repository tanpa membuat akun terlebih dahulu.
+   ![Repository](https://user-images.githubusercontent.com/30452406/155072121-1d4419db-d790-4807-bdfd-7d4dd2128b33.png)
+### 2. Insight -> Network
+Pada task kedua yaitu membuat branch developer, fitur1, fitur2. Berikut screenshots sesudah di merge :
+![Insight Github](https://user-images.githubusercontent.com/30452406/155072469-5eebc8d2-a6ab-46bd-b2af-8d37590e34d8.png)
