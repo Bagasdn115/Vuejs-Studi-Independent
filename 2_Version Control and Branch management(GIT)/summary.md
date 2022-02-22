@@ -25,4 +25,4 @@ Dalam materi ini mempelajai :
 
 # Task
 1. Membuat Repository 
-   !
+   ! Screenshots/Repository.png
