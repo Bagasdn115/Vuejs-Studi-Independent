@@ -28,6 +28,6 @@ Dalam materi ini mempelajari :
     Text Tool bisa diakses menggunakan shortcut "T" digunakan untuk menambahkan tulisan pada fram atau artboard yang telah kita buat.
 
 # Task
-### 1. Identifikasi Design UIUX
-https://docs.google.com/document/d/1kRqpqurmjqZhLcaQJ4k7upxxk-T3xP5n3RrvxVeJx_s/edit?usp=sharing
+### 1. Link View Figma
+https://www.figma.com/file/axpxVundO3NzdRMhBTWfpZ/UI-Vuejs-Study-Independent?node-id=0%3A1
 
