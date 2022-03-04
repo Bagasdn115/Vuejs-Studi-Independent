@@ -1,0 +1,316 @@
+@font-face {
+  font-family: Plus Jakarta;
+  src: url(PlusJakartaSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: Slabo;
+  src: url(Slabo27px-Regular.ttf);
+}
+
+.logo {
+  position: absolute;
+  width: 255px;
+  height: 49px;
+  left: 40px;
+  top: 32px;
+
+  background: url(../Praktikum/img/sample-logo\ 1.svg);
+}
+
+/*Navbar*/
+/* Home */
+
+.home {
+  position: absolute;
+  width: 65px;
+  height: 28px;
+  left: 1035px;
+  top: 30px;
+
+  font-family: Plus Jakarta;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #1a73e8;
+}
+
+/* About */
+
+.About {
+  position: absolute;
+  width: 64px;
+  height: 28px;
+  left: 1187px;
+  top: 30px;
+
+  font-family: Plus Jakarta;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #1a73e8;
+}
+
+/* Contact */
+
+.Contact {
+  position: absolute;
+  width: 84px;
+  height: 28px;
+  left: 1348px;
+  top: 30px;
+
+  font-family: Plus Jakarta;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #1a73e8;
+}
+
+.rectangle1 {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  left: 0px;
+  top: 75px;
+
+  background: url(../Praktikum/img/sample-pattern-1.svg);
+}
+
+/* Rectangle 2 */
+
+.rectangle2 {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  left: 0px;
+  top: 644px;
+
+  background: url(../Praktikum/img/sample-pattern-2.svg);
+}
+
+.title {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 50%;
+    top: 141px;
+
+  font-family: Slabo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 88px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+/* Rectangle 3 */
+.rectangle3 {
+  position: absolute;
+  width: 1013px;
+  height: 152px;
+  left: 35%;
+  top: 240px;
+
+  background: #ffffff;
+}
+
+/* Lorem post 1 */
+.lorem1 {
+  position: absolute;
+  width: 118px;
+  height: 29px;
+  left: 36%;
+  top: 257px;
+
+  font-family: Slabo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #1a73e8;
+}
+
+.contlorem1 {
+  position: absolute;
+  width: 964px;
+  height: 71px;
+  left: 36%;
+  top: 299px;
+
+  font-family: Slabo 27px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+.rectangle4 {
+  position: absolute;
+  width: 1013px;
+  height: 152px;
+  left: 35%;
+  top: 392px;
+
+  background: #ffffff;
+}
+
+.lorem2 {
+  position: absolute;
+  width: 140px;
+  height: 29px;
+  left: 36%;
+  top: 408px;
+
+  font-family: Slabo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #1a73e8;
+}
+
+.contlorem2 {
+  position: absolute;
+  width: 964px;
+  height: 71px;
+  left: 36%;
+  top: 450px;
+
+  font-family: Slabo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+.rectangle5 {
+  position: absolute;
+  width: 1013px;
+  height: 152px;
+  left: 35%;
+  top: 544px;
+
+  background: #ffffff;
+}
+
+.lorem3 {
+  position: absolute;
+  width: 140px;
+  height: 29px;
+  left: 36%;
+  top: 562px;
+
+  font-family: Slabo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #1a73e8;
+}
+
+.contlorem3 {
+  position: absolute;
+  width: 964px;
+  height: 71px;
+  left: 36%;
+  top: 604px;
+
+  font-family: Slabo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+.rectangle6 {
+  position: absolute;
+  width: 1013px;
+  height: 152px;
+  left: 35%;
+  top: 696px;
+
+  background: #ffffff;
+}
+
+.lorem4 {
+  position: absolute;
+  width: 140px;
+  height: 29px;
+  left: 36%;
+  top: 715px;
+
+  font-family: Slabo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #1a73e8;
+}
+
+.contlorem4 {
+  position: absolute;
+  width: 964px;
+  height: 71px;
+  left: 36%;
+  top: 757px;
+
+  font-family: Slabo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+/* Footer */
+
+.rectangle7 {
+  position: absolute;
+  width: 100%;
+  height: 73px;
+  left: 0px;
+  top: 951px;
+
+  background: #000000;
+}
+
+.copyright {
+  /* Copyright © 2022 Dahar */
+
+  position: absolute;
+  width: 400px;
+  height: 22px;
+  left: 50%;
+  top: 977px;
+
+  font-family: Slabo 27px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}
