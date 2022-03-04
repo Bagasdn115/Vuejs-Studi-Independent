@@ -194,7 +194,7 @@
     .container {
       height: 660px;
       width: auto;
-      background-image: url("/6_CSS/Praktikum/img/sample-pattern.png");
+      background-image: url("../Praktikum/img/sample-pattern.png");
       position: relative;
     }
   
