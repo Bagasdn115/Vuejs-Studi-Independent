@@ -1,316 +1,234 @@
-@font-face {
-  font-family: Plus Jakarta;
-  src: url(PlusJakartaSans-Medium.ttf);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #FEFEFE;
+  }
+  
+  /* burger icon */
+  
+  .burger {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: white;
+  }
+  
+  .change .bar2 {opacity: 0;   background-color: white;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+      background-color: white;
+  }
+  
+  /* wraper */
+  
+  .wrapper {
+  
+  }
+  
+  nav {
+    padding: 10px 20px;
+    box-shadow: 1px 2px 10px 2px rgba(0,0,0,.1);
+    background-color: white;
+  }
+  
+  nav .brand a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 550;
+  
+  }
+  
+  .bg-sidebar {
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    background: rgba(0,0,0,.1);
+    transition: .3s;
+    visibility: hidden;
+  }
+  
+  .bg-sidebar.change {
+    right: 0;
+    visibility: visible;
+    display: block;
+  }
+  
+  nav ul {
+      display: flex;
+      position: fixed;    
+      background-color:#505050;
+      top: 0;
+      bottom: 0;
+      right: -300px;
+      width: 300px;
+      transition: .5s;
+      align-items: flex-start;
+      flex-direction: column;
+  }
+  
+  nav ul.change {
+      right: 0;
+      transition: .5s;
+  }
+  
+  nav ul li {
+    list-style: none;
+    padding: 20px 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    font-size: 1.2rem;
+      text-decoration: none;
+  }
+  
+  @media screen and (min-width: 960px) {
+  
+    .bg-sidebar.change {
+     right: 0;
+     visibility: hidden;
+     display: none;
+    }
+  
+    .burger {
+      display: none;
+    }
+  
+    
+  
+    nav ul {
+      display: flex;
+        position: relative;    
+        background-color:unset;
+        top: unset;
+        bottom: unset;
+        right: unset;
+        width: unset;
+        flex-direction: row;
+    }
+  
+    nav ul li {
+      padding: 10px 15px;
+  
+    }
+  
+    nav ul li:hover::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      transition: .3s;
+      background-color: black;
+      transform: translateY(20px);
+    }
+  
+  
+    nav ul li a {
+      color: black;
+      font-size: 1.1rem;
+    }
+  
+    nav ul li:last-child {
+      font-weight: 550;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .container-flex {
+     width: 100%;
+     max-width: 1024px;
+     margin: auto;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
 }
 
 @font-face {
-  font-family: Slabo;
-  src: url(Slabo27px-Regular.ttf);
-}
-
-.logo {
-  position: absolute;
-  width: 255px;
-  height: 49px;
-  left: 40px;
-  top: 32px;
-
-  background: url(../Praktikum/img/sample-logo\ 1.svg);
-}
-
-/*Navbar*/
-/* Home */
-
-.home {
-  position: absolute;
-  width: 65px;
-  height: 28px;
-  left: 1035px;
-  top: 30px;
-
-  font-family: Plus Jakarta;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
-
-  color: #1a73e8;
-}
-
-/* About */
-
-.About {
-  position: absolute;
-  width: 64px;
-  height: 28px;
-  left: 1187px;
-  top: 30px;
-
-  font-family: Plus Jakarta;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
-
-  color: #1a73e8;
-}
-
-/* Contact */
-
-.Contact {
-  position: absolute;
-  width: 84px;
-  height: 28px;
-  left: 1348px;
-  top: 30px;
-
-  font-family: Plus Jakarta;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
-
-  color: #1a73e8;
-}
-
-.rectangle1 {
-  position: absolute;
-  width: 100%;
-  height: 70%;
-  left: 0px;
-  top: 75px;
-
-  background: url(../Praktikum/img/sample-pattern-1.svg);
-}
-
-/* Rectangle 2 */
-
-.rectangle2 {
-  position: absolute;
-  width: 100%;
-  height: 70%;
-  left: 0px;
-  top: 644px;
-
-  background: url(../Praktikum/img/sample-pattern-2.svg);
-}
-
-.title {
-    position: absolute;
-    width: auto;
-    height: auto;
-    left: 50%;
-    top: 141px;
-
-  font-family: Slabo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 45px;
-  line-height: 88px;
-  /* identical to box height */
-
-  color: #000000;
-}
-
-/* Rectangle 3 */
-.rectangle3 {
-  position: absolute;
-  width: 1013px;
-  height: 152px;
-  left: 35%;
-  top: 240px;
-
-  background: #ffffff;
-}
-
-/* Lorem post 1 */
-.lorem1 {
-  position: absolute;
-  width: 118px;
-  height: 29px;
-  left: 36%;
-  top: 257px;
-
-  font-family: Slabo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-
-  color: #1a73e8;
-}
-
-.contlorem1 {
-  position: absolute;
-  width: 964px;
-  height: 71px;
-  left: 36%;
-  top: 299px;
-
-  font-family: Slabo 27px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-
-  color: #000000;
-}
-
-.rectangle4 {
-  position: absolute;
-  width: 1013px;
-  height: 152px;
-  left: 35%;
-  top: 392px;
-
-  background: #ffffff;
-}
-
-.lorem2 {
-  position: absolute;
-  width: 140px;
-  height: 29px;
-  left: 36%;
-  top: 408px;
-
-  font-family: Slabo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-
-  color: #1a73e8;
-}
-
-.contlorem2 {
-  position: absolute;
-  width: 964px;
-  height: 71px;
-  left: 36%;
-  top: 450px;
-
-  font-family: Slabo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-
-  color: #000000;
-}
-
-.rectangle5 {
-  position: absolute;
-  width: 1013px;
-  height: 152px;
-  left: 35%;
-  top: 544px;
-
-  background: #ffffff;
-}
-
-.lorem3 {
-  position: absolute;
-  width: 140px;
-  height: 29px;
-  left: 36%;
-  top: 562px;
-
-  font-family: Slabo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-
-  color: #1a73e8;
-}
-
-.contlorem3 {
-  position: absolute;
-  width: 964px;
-  height: 71px;
-  left: 36%;
-  top: 604px;
-
-  font-family: Slabo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-
-  color: #000000;
-}
-
-.rectangle6 {
-  position: absolute;
-  width: 1013px;
-  height: 152px;
-  left: 35%;
-  top: 696px;
-
-  background: #ffffff;
-}
-
-.lorem4 {
-  position: absolute;
-  width: 140px;
-  height: 29px;
-  left: 36%;
-  top: 715px;
-
-  font-family: Slabo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-
-  color: #1a73e8;
-}
-
-.contlorem4 {
-  position: absolute;
-  width: 964px;
-  height: 71px;
-  left: 36%;
-  top: 757px;
-
-  font-family: Slabo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-
-  color: #000000;
-}
-
-/* Footer */
-
-.rectangle7 {
-  position: absolute;
-  width: 100%;
-  height: 73px;
-  left: 0px;
-  top: 951px;
-
-  background: #000000;
-}
-
-.copyright {
-  /* Copyright © 2022 Dahar */
-
-  position: absolute;
-  width: 400px;
-  height: 22px;
-  left: 50%;
-  top: 977px;
-
-  font-family: Slabo 27px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  /* identical to box height */
-
-  text-align: center;
-
-  color: #ffffff;
-}
+    font-family: Slabo 27px;
+    src: url(/Praktikum/Slabo27px-Regular.ttf);
+  }
+  
+  body {
+      color: black;
+      margin: 0;
+      padding: 0;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 8px;
+      position: relative;
+    }
+  
+    nav div a {
+      margin: 8px;
+    }
+  
+    .container {
+      height: 660px;
+      width: auto;
+      background-image: url("/6_CSS/Praktikum/img/sample-pattern.png");
+      position: relative;
+    }
+  
+    .container h1 {
+      font-family: Slabo 27px;
+      text-align: center;
+      font-weight: bold;
+      padding-top: 24px;
+    }
+  
+    .card {
+      font-family: Slabo 27px;
+      background-color: white;
+      width: 65%;
+      height: auto;
+      margin: 2px auto;
+      padding: 32px 16px;
+      border-radius: 4px;
+    }
+  
+    .card h3 {
+      font-family: Slabo 27px;
+      color: lightskyblue;
+    }
+  
+    .footer{
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      padding-left: 10px;
+      line-height: 50px;
+      top: 700px;
+      background: #333;
+      color: #fff;
+      text-align: center;
+      bottom: 0;
+  }
