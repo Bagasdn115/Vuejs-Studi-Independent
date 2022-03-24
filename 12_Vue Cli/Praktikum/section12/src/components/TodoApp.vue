@@ -1,23 +1,44 @@
 <template>
-  <div>
-    <ol>
-      <li v-for="(todo, index) in todos" :key="index">
-        {{ todo }}
-        <button @click="editTodo(index, todo)">Edit</button>
-        <button @click="removeTodo(index)">Delete</button>
-      </li>
-    </ol>
+  <div id="app">
+    <div class="container">
+      <h1>To do list</h1>
+      <div class="row">
+        <ol>
+          <li v-for="(todo, index) in todos" :key="index">
+            {{ todo }}
+            <div class="row">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary" @click="editTodo(index, todo)">Edit</button>
+                <button type="button" class="btn btn-primary" @click="removeTodo(index)">Hapus</button>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
 
-    <div v-if="!isEditing">
-      <input type="text" v-model="todo" />
-      <input type="submit" value="Tambahkan" @click="storeTodo" />
-    </div>
-    <div v-else>
-      <input type="text" v-model="todo" />
-      <input type="submit" value="Update" @click="updateTodo" />
-    </div>
+      <div v-if="!isEditing">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" v-model="todo" />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" @click="storeTodo">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+      <div v-else>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" v-model="todo" />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" @click="updateTodo">
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <!-- Task table -->
+      <!-- Task table -->
+    </div>
   </div>
 </template>
 
@@ -30,10 +51,10 @@ export default {
 
   data() {
     return {
-    isEditing: false,
-    todo: "",
-    todos: [],
-    selectedTodo: null,
+      isEditing: false,
+      todo: "",
+      todos: [],
+      selectedTodo: null,
     };
   },
 
