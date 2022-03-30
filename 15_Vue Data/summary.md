@@ -22,3 +22,6 @@
 
 ## Autentikasi
     Autentikasi adalah suatu proses yang menjadi tindakan atau pembuktian (validasi) terhadap identitas pengguna ketika ingin memasuki dan mengakses sistem tertentu.
+
+# Note
+    Folder praktikum section 15 = 15_Vue Data/Praktikum
