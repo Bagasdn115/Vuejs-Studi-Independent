@@ -6,11 +6,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        listNewsapi: [],
+        authorNewsapi: [],
     },
     mutations: {
-        setListNewsapi(state, payload){
-            state.listNewsapi = payload;
+        setAuthorNewsapi(state, payload){
+            state.authorNewsapi = payload;
         }
     },
     actions: {
