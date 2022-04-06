@@ -1,145 +1,66 @@
 <template>
-  <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" app>
-      <v-toolbar class="primary" dark>
-        <v-toolbar-title>Menu</v-toolbar-title>
-
-        <v-spacer></v-spacer>
-      </v-toolbar>
-      <v-list dense nav>
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi-view-dashboard</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>Dashboard</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi-image</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>Photos</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi mdi-map-legend</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>About</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-app-bar app class="primary">
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title class="white--text">News</v-toolbar-title>
-    </v-app-bar>
-
-    <v-main>
-      
-      <v-card :loading="loading" class="mx-auto my-5" max-width="460">
-        <template slot="progress">
-          <v-progress-linear
-            color="deep-purple"
-            height="10"
-            indeterminate
-          ></v-progress-linear>
-        </template>
-
-        <v-img
-          height="250"
-          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-        ></v-img>
-
-        <v-card-title v-for="news in listNews" :key="news.author">{{ news.author }}</v-card-title>
-        <v-card-text>
-          <v-row align="center" class="mx-0">
-            <v-rating
-              :value="4.5"
-              color="amber"
-              dense
-              half-increments
-              readonly
-              size="14"
-            ></v-rating>
-
-            <div class="grey--text ml-4">4.5 (413)</div>
-          </v-row>
-
-          <div class="my-4 subtitle-1">$ • Italian, Cafe</div>
-
-          <div>
-            Small plates, salads & sandwiches - an intimate setting with 12
-            indoor seats plus patio seating.
+  <v-app light>
+  <SideMenu :drawer="drawer"  :api_key="api_key" @selectsource="setResource" ></SideMenu>
+  <v-toolbar fixed app light clipped-left color="primary" class="elevation-2">
+    <v-toolbar-side-icon @click="drawer = !drawer"   class="white--text"></v-toolbar-side-icon>
+    <v-toolbar-title class="white--text">News App</v-toolbar-title>
+  </v-toolbar>
+  <v-content>
+    <v-container fluid>
+      <MainContent :articles="articles"></MainContent> 
+    </v-container>
+   </v-content>
+   <v-footer class="secondary" app>
+      <v-layout row wrap align-center>
+        <v-flex xs12>
+          <div class="white--text ml-3">Made with<v-icon class="red--text">favorite</v-icon>by <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a>and <a class="white--text" href="https://github.com/rachidsakara" target="_blank">Rachid Sakara</a>
           </div>
-        </v-card-text>
-      </v-card>
-
-      <v-card :loading="loading" class="mx-auto my-5" max-width="460">
-        <template slot="progress">
-          <v-progress-linear
-            color="deep-purple"
-            height="10"
-            indeterminate
-          ></v-progress-linear>
-        </template>
-
-        <v-img
-          height="250"
-          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-        ></v-img>
-
-        <v-card-title>Cafe Badilico</v-card-title>
-        <v-card-text>
-          <v-row align="center" class="mx-0">
-            <v-rating
-              :value="4.5"
-              color="amber"
-              dense
-              half-increments
-              readonly
-              size="14"
-            ></v-rating>
-
-            <div class="grey--text ml-4">4.5 (413)</div>
-          </v-row>
-
-          <div class="my-4 subtitle-1">$ • Italian, Cafe</div>
-
-          <div>
-            Small plates, salads & sandwiches - an intimate setting with 12
-            indoor seats plus patio seating.
-          </div>
-        </v-card-text>
-      </v-card>
-    </v-main>
+        </v-flex>
+      </v-layout>
+    </v-footer>
   </v-app>
 </template>
-
 <script>
-
+import axios from 'axios' 
+import MainContent from './components/MainContent.vue' 
+import SideMenu from './components/SideMenu.vue' 
 export default {
-  name : "App",
-  computed: {
-    listNews(){
-      return this.$store.state.news.list;
+      components: {
+        MainContent,
+        SideMenu 
+      },
+    data () {
+      return {
+       drawer: false,
+       api_key:'e00bd0e3b2a64618b2e9245ac9befaca', 
+       articles: [],
+       errors: [] 
+      }
     },
-  },
-  methods: {
-    fetchNews() {
-      this.$store.dispatch("news/fetchList");
-    },
-  },
-  mounted(){
-    this.fetchNews();
-  },
-};
+    created () {
+      axios.get('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey='+this.api_key)
+        .then(response => {
+          this.articles = response.data.articles
+          console.log('data:')
+          console.log(response.data.articles) 
+        })
+        .catch(e => {
+          this.errors.push(e)
+        })
+     },
+     
+      methods: {
+            setResource(source){             
+              axios.get('https://newsapi.org/v2/top-headlines?sources='+source+'&apiKey='+this.api_key)
+              .then(response => {
+                this.articles = response.data.articles
+                console.log(response.data)             
+              })
+              .catch(e => {
+                this.errors.push(e)
+              })
+
+            }
+         }
+  }
 </script>
