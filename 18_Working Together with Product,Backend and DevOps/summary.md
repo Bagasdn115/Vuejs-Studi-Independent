@@ -17,4 +17,4 @@
 
 
 # Note
-    Folder praktikum section 17 = 17_Vue UI Framewrok/Praktikum
+    Site : https://bagas-vuejs-section18.netlify.app/
