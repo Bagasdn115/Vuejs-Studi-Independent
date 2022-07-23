@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Basic Tabs</title>
+    <style>
+        .mb-3{
+            text-align: center;
+        }
+        .dimension {
+            width: 500px;
+            height: 300px;
+        }
+        
+        .nav-tabs .nav-link.active {
+            background-color: #9400d3;
+            color: #fff;
+            border: 3px solid #9400d3;
+        }
+        
+        .nav-tabs .nav-link {
+            background-color: #fff;
+            color: #9400d3;
+            border: 3px solid #9400d3;
+            margin-right: 2rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        
+        .nav-tabs .nav-link:hover {
+            border: 3px solid #9400d3;
+        }
+        
+        .nav-tabs {
+            border-bottom: 1px solid #9400d3;
+        }
+        
+        .tab-content {
+            border: 1px solid #9400d3;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-2">
+        <h3 class="mb-3">Basic Tabs</h3>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#git">Git</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#uiux"> UI/UX</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#figma">Figma</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#html">HTML</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#css">CSS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#bootstrap">Bootstrap</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#js">Javascript</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#cc">Claen Code</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="git">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+                        <h3>Version Control and Branch Management (Git)</h3>
+                        <p>
+                            <b>Versioning</b> adalah mengetur versi dari Source Code program. <b>Tools</b> yang digunakan dalam menggukan git adalah Version Control System (VCS), Source Code Manager(SCM) dah Revision Control System(RCS). <b>Git</b> adalah salah satu version control system popule yang digunakan para developer untuk mengembangkan software sacara bersama-sama
+                        </p>
+                        <h3>Task</h3>
+                        <p>Untuk mengakses Task dapat <a href="#">mengklik link ini</a></p>
+                    </div>
+                    <div class="col-auto">
+                        <img src="img/git.png" class="img-thumbnail dimension">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="uiux">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+                        <h3>Introduction UI dan UX</h3>
+                        <p>
+                            <b>User Experience(UX)</b> adalah segala sesuatu yang dirasakan pengguna setiap kali mereka menggunakan suatu produk. <b>User Interface(UI)</b> adalah  visual yang digunakan pengguna untuk berinteraksi dengan produk kita. <b>Prototype</b> adalah Simulasi atau versi sederhana dari produk akhir.
+                        </p>
+                        <h3>Task</h3>
+                        <p>Untuk mengakses Task dapat <a href="#">mengklik link ini</a></p>
+                    </div>
+                    <div class="col-auto">
+                        <img src="img/uiux.jpeg" class="img-thumbnail dimension">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="figma">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+                        <h3>Figma</h3>
+                        <p>
+                            <b>Figma</b> adalah editor grafik vektor dan alat prototyping yang terutama berbasis web, dengan fitur offline tambahan yang diaktifkan oleh aplikasi desktop untuk macOS dan Windows.
+                        </p>
+                        <h3>Task</h3>
+                        <p>Untuk mengakses Task dapat <a href="#">mengklik link ini</a></p>
+                    </div>
+                    <div class="col-auto">
+                        <img src="img/figma.png" class="img-thumbnail dimension">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="html">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+                        <h3>HTML</h3>
+                        <p>
+                            <b>Frontend</b> adalah sebuah bagian dari website yang membuat tampilan yang menarik kepada user. Contoh bahasa pemrograman pada frontend diantara lain adalah HTML(Hypertext Markup Language), CSS (Cascading Style Sheets) dan Javascript. <b>HTML (Hypertext Markup Language)</b> adalah sebuah standar yang digunakan secara luas untuk menampilkan halaman web. 
+                        </p>
+                        <h3>Task</h3>
+                        <p>Untuk mengakses Task dapat <a href="#">mengklik link ini</a></p>
+                    </div>
+                    <div class="col-auto">
+                        <img src="img/html.png" class="img-thumbnail dimension">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="css">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+                        <h3>CSS</h3>
+                        <p>
+                            <b>CSS</b> adalah kepanjangan dari Cascading Style Sheets yang berfungsi Dapat menghias halaman web (color, size, font, background, width, height, dll) dan Dapat mengatur posisi pada halaman web. (float, align, display, position, dll).
+                        </p>
+                        <h3>Task</h3>
+                        <p>Untuk mengakses Task dapat <a href="#">mengklik link ini</a></p>
+                    </div>
+                    <div class="col-auto">
+                        <img src="img/css.png" class="img-thumbnail dimension">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="bootstrap">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+                        <h3>Bootstrap</h3>
+                        <p>
+                            <b>Bootstrap</b> adalah framework atau kerangka HTML, CSS, dan JavaScript yang berfungsi untuk mendesain website responsive dengan cepat dan mudah.
+                        </p>
+                        <h3>Task</h3>
+                        <p>Untuk mengakses Task dapat <a href="#">mengklik link ini</a></p>
+                    </div>
+                    <div class="col-auto">
+                        <img src="img/bs.png" class="img-thumbnail dimension">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="js">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+                        <h3>Javascript Refreshment</h3>
+                        <p>
+                            <b>Javascript</b> adalah bahasa pemrograman tingkat tinggi dan dinamis, javascript biasanya digunakan untuk membuat website dengan tag SCRIPT.
+                        </p>
+                        <h3>Task</h3>
+                        <p>Untuk mengakses Task dapat <a href="#">mengklik link ini</a></p>
+                    </div>
+                    <div class="col-auto">
+                        <img src="img/js.png" class="img-thumbnail dimension">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="cc">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+                        <h3>Clean Code</h3>
+                        <p>
+                            Clean Code adalah istilah untuk kode yang mudah dibaca, difahami dan diubah programmer. Kenapa Clean Code? Karena Clean Code dapat mempermudah kolaborasi kerja, pengembangan fitur dan pengembangan lebih cepat
+                        </p>
+                        <h3>Task</h3>
+                        <p>Untuk mengakses Task dapat <a href="#">mengklik link ini</a></p>
+                    </div>
+                    <div class="col-auto">
+                        <img src="img/cc.png" class="img-thumbnail dimension">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
